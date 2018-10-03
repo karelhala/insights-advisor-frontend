@@ -22,6 +22,7 @@ import {
 } from '@patternfly/react-core';
 import { sortBy } from 'lodash';
 import TimeAgo from 'react-timeago';
+import Crumbs from '../../PresentationalComponents/Crumbs/Crumbs.js';
 import './_actions.scss';
 
 class ListActions extends Component {
@@ -159,6 +160,7 @@ class ListActions extends Component {
 
         return (
             <React.Fragment>
+                <Crumbs current={ this.state.rule.description } />
                 <PageHeader>
                     <PageHeaderTitle title={ this.state.rule.description }/>
                 </PageHeader>

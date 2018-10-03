@@ -14,6 +14,7 @@ import {
     Main
 } from '@red-hat-insights/insights-frontend-components';
 import { Stack, StackItem } from '@patternfly/react-core';
+import Crumbs from '../../PresentationalComponents/Crumbs/Crumbs.js';
 import './_actions.scss';
 
 class ViewActions extends Component {
@@ -145,6 +146,7 @@ class ViewActions extends Component {
         const rows = this.limitRows();
         return (
             <React.Fragment>
+                <Crumbs current={ this.parseUrlTitle(this.props.match.params.type) } />
                 <PageHeader>
                     <PageHeaderTitle
                         className='actions__view--title'
